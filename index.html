@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+
+<div class="home">
+
+    <ul class="post-list">
+        {% for post in site.categories.news %}
+        <div class="post-preview">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <h2 class="post-title">
+                    {{ post.title }}
+                </h2>
+                <h3 class="post-subtitle">
+                    {{ post.desc }}
+                </h3>
+                <p class="post-meta">Posted by {{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</p>
+            </a>
+        </div>
+        <hr/>
+        {% endfor %}
+    </ul>
+
+</div>
+
+<!-- Pager -->
+<!--<ul class="pager">
+    <li class="next">
+        <a href="#">Older Posts &rarr;</a>
+    </li>
+</ul>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+-->
