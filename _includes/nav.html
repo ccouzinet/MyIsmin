@@ -38,7 +38,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Associations <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for asso in site.categories.assos %}
-                        <li><a href="{{ asso.url | prepend: site.baseurl}}">{{ asso.name }}</a></li>
+                        <li><a href="{{ asso.url | remove: '/' | prepend: site.baseurl}}">{{ asso.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
@@ -46,7 +46,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Clubs <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for club in site.categories.clubs %}
-                        <li><a href="{{ club.url | prepend: site.baseurl}}">{{ club.name }}</a></li>
+                        <li><a href="{{ club.url | remove: '/' | prepend: site.baseurl}}">{{ club.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
